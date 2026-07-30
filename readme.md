@@ -1,10 +1,11 @@
-[ git config --global http.proxy http://127.0.0.1:10808]()
+`git config --global user.name "John Doe"`
+
+`git config --global user.email johndoe@example.com`
 
 
+[git config --global http.proxy http://127.0.0.1:10808]()
 
 git config --global https.proxy http://127.0.0.1:10808
-
-
 
 ## 一、怎么查看当前默认对应哪个仓库
 
