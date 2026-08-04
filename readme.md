@@ -2,7 +2,7 @@
 
 | 创建时间 |                            内容                            | 待补充                    | 版本 |   ID   |
 | :------: | :--------------------------------------------------------: | ------------------------- | :--: | :----: |
-| 2026.8.3 | 图形化vscode+git<br />+github相关操作内容（个人/团队协作） | gitlab相关<br />git命令行 | demo | 杜宇晖 |
+| 2026.8.4 | 图形化vscode+git<br />+github相关操作内容（个人/团队协作） | gitlab相关<br />git命令行 | demo | 杜宇晖 |
 |          |                                                            |                           |      |        |
 |          |                                                            |                           |      |        |
 |          |                                                            |                           |      |        |
@@ -65,7 +65,7 @@
 
 ![1785743016672](image/readme/1785743016672.png)
 
-* 修改文件后进行第一次上传提交，可以自定义命名（此处命名为每一次更改的命名，只会在下方的图表里显示，仅为记录更改历史）
+* 修改文件后进行第一次上传提交，可以自定义命名（此处命名为每一次更改的存档命名，只会在下方的图表里显示，仅为记录更改历史）
 
 ![1785743170299](image/readme/1785743170299.png)
 
@@ -73,7 +73,7 @@
 
 ![1785744205351](image/readme/1785744205351.png)
 
-* github自动上传/生成到对应的库里面**【！！！如果出现错误检查网络配置问题，并在终端输入对应的命令解决！！！】**
+* github自动上传/生成到对应的库里面**【！！！如果出现错误，检查网络配置问题，并在终端输入对应的命令解决！！！】**
 
 ![1785744684100](image/readme/1785744684100.png)
 
@@ -91,7 +91,7 @@
 
 ![1785727697525](image/readme/1785727697525.png)
 
-* 输入对应仓库名/选择公开或者私密**【****！！！不要打开Add README！！！】**
+* 输入对应仓库名/选择公开或者私密**【！！！不要打开Add README，下面的Add任何一个都不要点，必须确保创建的时候是纯空仓库！！！】**
 
 ![1785727974177](image/readme/1785727974177.png)
 
@@ -147,6 +147,8 @@
 
 ![1785821995563](image/readme/1785821995563.png)
 
+<<<<<<< Updated upstream
+
 * 当出现PR请求时候进行审批操作然后并入主分支
 
 ![1785824754053](image/readme/1785824754053.png)
@@ -195,7 +197,7 @@
 
 ### 一、怎么查看当前默认对应哪个仓库
 
-运行：
+终端运行：
 
 `git branch -vv`
 
@@ -207,88 +209,53 @@
 
 `git remote -v`
 
-### 二、最稳妥的方法：每次明确写远程名称
+### 二、推送到多个远程仓库明确写远程名称
 
-推送到原来的 `gitdemo`：
+当一个本地仓库链接多个远程仓库时
 
-<pre class="overflow-visible! px-0!" data-start="689" data-end="727"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">push</span><span></span><span class="?11">origin</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
+`git push <远程仓库别名> <本地分支名>`
 
-推送到新建的 `gittest`：
+注意这里的远程仓库别名是之前你本地设置的对应标签，不是远程仓库的名字，查看`git remote -v`即可找到对应关系
 
-<pre class="overflow-visible! px-0!" data-start="748" data-end="787"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">push</span><span></span><span class="?11">gittest</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
+例如推送到原来的 `gitdemo`：
+
+`git push origin main`
+
+推送到指定的远程仓库 `cooperation_test`(之前自定义对应的名字是github)：
+
+`git push github main`
 
 从原仓库获取更新：
 
-<pre class="overflow-visible! px-0!" data-start="800" data-end="838"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">pull</span><span></span><span class="?11">origin</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
+`git pull origin main`
 
-从新仓库获取更新：
+设置默认推送仓库：
 
-<pre class="overflow-visible! px-0!" data-start="851" data-end="890"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">pull</span><span></span><span class="?11">gittest</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
+`git push -u github main`
 
-因此命令可以这样读：
+把本地main分支对应的上游设置为远程仓库`cooperation_test`，这样后面使用`git push`自动推送到该仓库
 
-<pre class="overflow-visible! px-0!" data-start="904" data-end="936"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute end-1.5 top-1 z-2 md:end-2 md:top-1"></div><div class="relative"><div class="pe-11 pt-3"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span>git push 远程仓库别名 本地分支</span></code></pre></div></div></div></div></div></div></div></div></div></div></div></div></div></pre>
+修改默认上游：
 
-### 三、修改代码后，同时更新两个仓库
+`git fetch github`获取该远程分支
 
-正常修改并提交：
+`git branch --set-upstream-to=github/main main`
 
-<pre class="overflow-visible! px-0!" data-start="1046" data-end="1110"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">add</span><span> .
-</span><span class="?11">git</span><span></span><span class="?11">commit</span><span></span><span class="?v">-</span><span class="?11">m</span><span></span><span class="?z">"feat: update project"</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
+### 三、回滚版本
 
-然后分别推送：
+优先使用（编号可以从操作历史里面查找)：
 
-<pre class="overflow-visible! px-0!" data-start="1121" data-end="1181"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">push</span><span></span><span class="?11">origin</span><span></span><span class="?11">main</span><span>
-</span><span class="?11">git</span><span></span><span class="?11">push</span><span></span><span class="?11">gittest</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
+`git revert <提交编号>`
 
-这样同一个本地 commit 会同时存在于两个 GitHub 仓库中。
+这样做不会删除历史，相当于创建一个新的反向提交：
 
-### 四、建议只选择一个“主仓库”
+`A → B → 错误提交C → 撤销C的提交D`
 
-不建议两个仓库都让不同成员独立修改，否则容易出现：
+然后再推送`git push`
 
-<pre class="overflow-visible! px-0!" data-start="1417" data-end="1482"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute end-1.5 top-1 z-2 md:end-2 md:top-1"></div><div class="relative"><div class="pe-11 pt-3"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span>origin/main 有提交 A
-gittest/main 有提交 B
-本地无法直接同时跟随两套不同历史</span></code></pre></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></pre>
+### 四、文件选择性上传与跟踪管理
 
-最好明确：
-
-<pre class="overflow-visible! px-0!" data-start="1491" data-end="1547"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute end-1.5 top-1 z-2 md:end-2 md:top-1"></div><div class="relative"><div class="pe-11 pt-3"><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span>origin/main   主仓库，日常协作
-gittest/main  备份或测试仓库</span></code></pre></div></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></pre>
-
-那么日常使用：
-
-<pre class="overflow-visible! px-0!" data-start="1558" data-end="1617"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">pull</span><span></span><span class="?11">origin</span><span></span><span class="?11">main</span><span>
-</span><span class="?11">git</span><span></span><span class="?11">push</span><span></span><span class="?11">origin</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div><div class=""><div class=""></div></div></div></div></div></div></div></div></pre>
-
-需要同步备份时：
-
-<pre class="overflow-visible! px-0!" data-start="1629" data-end="1668"><div class="relative w-full mt-4 mb-1"><div class=""><div class="contents"><div class="border border-token-border-light border-radius-3xl corner-superellipse/1.1 rounded-3xl"><div class="relative h-full w-full border-radius-3xl bg-(--code-block-surface) corner-superellipse/1.1 overflow-clip rounded-3xl [--code-block-surface:var(--bg-elevated-secondary)] dark:[--code-block-surface:var(--composer-surface-primary)] lxnfua_clipPathFallback"><div class="pointer-events-none absolute inset-x-4 top-12 bottom-4"><div class="pointer-events-none sticky z-40 shrink-0 z-1!"><div class="sticky bg-token-border-light"></div></div></div><div class="relative"><div class="h-full min-h-0 min-w-0"><div class="h-full min-h-0 min-w-0"><div class=""><div class="relative"><div class=""><div class="relative z-0 flex max-w-full"><div id="code-block-viewer" dir="ltr" class="q9tKkq_viewer cm-editor z-10 light:cm-light dark:cm-light flex h-full w-full flex-col items-stretch ?s ?16"><div class="cm-scroller"><pre class="cm-content q9tKkq_readonly m-0"><code><span class="?11">git</span><span></span><span class="?11">push</span><span></span><span class="?11">gittest</span><span></span><span class="?11">main</span></code></pre></div></div></div></div></div></div></div></div></div></div></div></div></div></div></pre>
-
-### 五、把默认跟踪重新设置为 origin/main
-
-因为你刚才使用了：
-
-git push -u gittest main
-
-当前默认大概率已经是 gittest/main。若想让原仓库继续作为主仓库，可以执行：
-
-git fetch origin
-git branch --set-upstream-to=origin/main main
-
-再检查：
-
-git branch -vv
-
-看到：
-
-* main ... [origin/main] ...
-
-就说明设置成功。
-
-### 六、文件选择性上传与跟踪管理
-
-新建`.gitignore`文件里面标明不需要上传的文件/文件夹，例如**下载安装的配置文件/下载的项目环境依赖/工程产生的运行文件**等等
+新建`.gitignore`文件里面标明不需要上传的文件/文件夹，例如**下载安装的配置文件/下载的项目依赖/工程产生的运行文件**等等
 
 ![1785725657382](image/readme/1785725657382.png)
 
@@ -300,3 +267,31 @@ git branch -vv
 ```
 git rm --cached requirement.txt
 ```
+
+### 五、分支文件保存
+
+输入`git reflog --all --date=local`查看所有分支下的文件保存记录，假如切换分支发现文件版本回退的话，云端github上还没来得及同步，就要查看本地的分支里面是否仍然保存。当发现文件删除错误/分支保存错误/切换分支文件错乱等的时候建议同步使用ai帮助恢复。
+
+## 五、问题汇总
+
+1.我加入了一个私有仓库，但是没法从主页看到，怎么解决？
+
+点击`github头像-------->settings--------->Repositors`可以查看到你在其中的别人创建的私有仓库。
+
+2.我自己创建的仓库，我自己修改代码直接并入到主分支是否可行？
+
+免费版不行，也需要通过同`三.2`里面的方式进行新建分支/上传/新建PR申请。（管理者自己）如果不想受限于自己的规则，自由更改不经过其他人审查可以把规则`disabled`然后再启用。
+
+3.推送到除了github的其他平台（gitee/gitlab/...），怎么操作？
+
+需要提前在对应的平台上创建好远程仓库，**得到远程地址（https链接)**，然后通过添加远程库的形式输入地址添加
+
+4.终端输入命令查看日志，按回车会不断刷新历史记录，怎么退出？
+
+按`q`退出
+
+5.不想每次`commit`都标记一个存档名，怎么办？
+
+点击提交旁边的提交（修改Amend），确认后相当于使用上一次存档名的基础上更新
+
+![1785831068737](image/readme/1785831068737.png)
